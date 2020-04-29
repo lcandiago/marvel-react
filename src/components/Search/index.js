@@ -2,7 +2,9 @@ import React, { useCallback, useState } from 'react';
 
 import api from '../../services/api';
 
-import { Form, Input, Button } from './styles';
+import Button from '../Button';
+
+import { Form, Input } from './styles';
 
 const Search = ({ setResults }) => {
   const [search, setSearch] = useState('');
@@ -25,12 +27,12 @@ const Search = ({ setResults }) => {
   return (
     <Form onSubmit={handleSubmit}>
       <Input
-        placeholder="Digite o nome do personagem"
+        placeholder="Type the character name"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      <Button type="submit">Pesquisar</Button>
+      <Button type="submit">Search</Button>
     </Form>
   );
 };

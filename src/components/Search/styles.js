@@ -2,38 +2,34 @@ import styled from 'styled-components';
 
 export const Form = styled.form`
   display: flex;
+  flex: 1;
+  width: 100%;
+  align-items: center;
 
-  @media (max-width: 420px) {
+  @media (max-width: 600px) {
     flex-direction: column;
+
+    button {
+      width: 100%;
+    }
   }
 `;
 
 export const Input = styled.input`
-  height: 40px;
-  font-size: 22px;
-  padding: 0 8px;
+  height: 48px;
+  padding: 0 16px;
   flex: 1;
   margin-right: 14px;
+  border-radius: 6px;
 
-  @media (max-width: 550px) {
+  @media (max-width: 600px) {
     font-size: 16px;
+    width: 100%;
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 600px) {
     flex: auto;
     margin-right: 0;
-  }
-`;
-
-export const Button = styled.button`
-  background-color: #f0141e;
-  border: none;
-  color: white;
-  padding: 0 20px;
-  font-weight: bold;
-
-  @media (max-width: 420px) {
-    height: 40px;
-    margin-top: 14px;
+    margin-bottom: 14px;
   }
 `;

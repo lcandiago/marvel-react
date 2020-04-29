@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const Section = styled.section`
+  margin-top: 40px;
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
