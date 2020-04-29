@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { shade } from 'polished';
 
 export default createGlobalStyle`
   * {
@@ -9,12 +10,37 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #F0F0F5;
+    background: #282828;
     -webkit-font-smoothing: antialiased;
+    color: #e0e0e0;
   }
 
   body, input, button {
-    font: 16px Roboto, sans-serif;
+    font: 16px 'Noto Sans TC', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    letter-spacing: -0.2px;
+  }
+
+  a {
+    color: #fff;
+
+    &:hover {
+      color: ${shade(0.2, '#fff')};
+    }
   }
 
   #root {

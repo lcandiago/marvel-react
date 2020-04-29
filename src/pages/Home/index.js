@@ -1,16 +1,24 @@
 import React, { useState } from 'react';
 
+import Header from '../../components/Header';
 import Search from '../../components/Search';
 import ResultList from '../../components/ResultList';
+import MyList from '../../components/MyList';
 
 const Home = () => {
   const [results, setResults] = useState([]);
 
   return (
     <section>
-      <Search setResults={setResults} />
+      <Header>
+        <Search setResults={setResults} />
+      </Header>
 
-      <ResultList results={results} />
+      {results.length > 0 && (
+        <ResultList results={results} setResults={setResults} />
+      )}
+
+      <MyList />
     </section>
   );
 };
